@@ -1,7 +1,10 @@
 
 pipeline {
     agent any
-
+tools {
+        maven 'Maven3'  // Ensure Maven is installed
+        jdk 'JD'
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -35,4 +38,5 @@ pipeline {
         }
     }
 }
+
 
